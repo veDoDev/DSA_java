@@ -41,7 +41,7 @@ class Solution{
         double digits = 0;
         for(int i = 2; i<=N; i++)
         {
-            digits += Math.log10(i);
+            digits += Math.log10(i); //log(n!) = log(n.(n-1).(n-2)...3.2.1) = log(n) + log(n-1) + log(n-2) + .... + log(2) + log(1)
         }
         return (int)Math.floor(digits)+1;
     }
