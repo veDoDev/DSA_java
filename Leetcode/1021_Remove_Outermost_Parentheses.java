@@ -1,3 +1,4 @@
+//------------------------------------------------------------------------------Fastest------------------------------------------------------------------------------------------------------
 class Solution {
     public String removeOuterParentheses(String s) 
     {
@@ -26,3 +27,66 @@ class Solution {
         
     }
 }
+
+//---------------------------------------------------------------------------Second Thought---------------------------------------------------------------------------------------------------
+// class Solution {
+//     public String removeOuterParentheses(String s) 
+//     {
+//         Stack<Character> stack = new Stack<>();
+//         StringBuilder res = new StringBuilder();
+
+//         for(int n = 0; n < s.length(); n++)
+//         {
+//             char i = s.charAt(n);
+//             if(i == '(')    
+//             {
+//                 if(stack.size() != 0)   
+//                     res.append(i);
+
+//                 stack.push('(');
+//             }
+//             else
+//             {
+//                 if(stack.size() != 1)
+//                     res.append(i);
+
+//                 stack.pop();
+//             }
+//         }
+
+//         return res.toString();
+        
+//     }
+// }
+
+
+//---------------------------------------------------------------------------First Thought----------------------------------------------------------------------------------------------------
+// class Solution {
+//     public String removeOuterParentheses(String s) 
+//     {
+//         Stack<Character> stack = new Stack<>();
+//         String res = "";
+
+//         for(int n = 0; n < s.length(); n++)
+//         {
+//             char i = s.charAt(n);
+//             if(i == '(')    
+//             {
+//                 if(stack.size() != 0)   
+//                     res += "" + i;
+
+//                 stack.push('(');
+//             }
+//             else
+//             {
+//                 if(stack.size() != 1)
+//                     res += "" + i;
+
+//                 stack.pop();
+//             }
+//         }
+
+//         return res;
+        
+//     }
+// }
